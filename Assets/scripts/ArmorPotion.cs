@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmorPotion 
+public class ArmorPotion : InventoryObject
 {
-    public string name;
-    public float valueToAdd;
+    
 
 
 
 
-    public ArmorPotion()
+    public ArmorPotion() :base("ArmorPotion", 5)
     {
-        name = "ArmotPotion";
-        valueToAdd = 5;
+        
     }
 
 

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPotion : InventoryObject
+public class InventoryObject 
 {
-    
+    public string name;
+    public float valueToAdd;
 
 
 
-    public HealthPotion() : base("HealthPotion", 5)
+
+
+    public InventoryObject(string nameValue, float valueToAddThis)
     {
-        
+        name = nameValue;
+        valueToAdd = valueToAddThis;
     }
-
 
 
 
