@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryObject : Personaje
+public class InventoryObject 
 {
 
     //profe, para q me deje acceder a "health" he puesto q el inventory herede de personaje para tener acceso 
@@ -24,13 +24,24 @@ public class InventoryObject : Personaje
 
 
 
-    public void Use(Warrior w)
+    public void Use(Personaje pj)
     {
-        Debug.Log(name + health + 5);
+        pj.SetHealth(pj.GetHealth() + (int)valueToAdd);
+        Debug.Log(name + pj.GetHealth());
     }
 
-    public void Use(Wizard wi)
+
+    public float GetvalueToAdd()
     {
-        Debug.Log(name + health + 5);
+        return valueToAdd;
     }
+
+
+    public void SetvalueToAdd(float value)
+    {
+        if (value >= 5 )
+            valueToAdd = value;
+    }
+
+
 }

@@ -6,6 +6,14 @@ public class Personaje
 {
     private string name;
     protected int health, armour;
+    InventoryObject[] arrayObjects;
+
+
+
+
+   
+
+
 
 
     public Personaje()
@@ -20,8 +28,19 @@ public class Personaje
         health = healthValue;
         armour = armourValue;
 
+        arrayObjects = new InventoryObject[2];
+        arrayObjects[0] = new HealthPotion();
+        arrayObjects[1] = new ArmorPotion();
 
 
+    }
+
+    public void UseAllObjects()
+    {
+        for (int i = 0; i < arrayObjects.Length; i++)
+        {
+            arrayObjects[i].Use(this);
+        }
     }
 
 
@@ -44,6 +63,13 @@ public class Personaje
 
     public void SetHealth(int value)
     {
+        if(value >= 0)
         health = value;
     }
+
+
+    
+
+
+    
 }

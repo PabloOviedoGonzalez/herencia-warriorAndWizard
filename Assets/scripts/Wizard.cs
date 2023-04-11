@@ -36,5 +36,7 @@ public class Wizard : Personaje
     {
         base.Attack(magicPower);
     }
+
+    
 }
 
