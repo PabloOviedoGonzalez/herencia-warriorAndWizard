@@ -67,9 +67,21 @@ public class Personaje
         health = value;
     }
 
+    public int GetArmour()
+    {
+        return armour;
+    }
 
-    
+
+    public void SetArmour(int value)
+    {
+        if (value >= 0)
+            armour = value;
+    }
 
 
-    
+
+
+
+
 }

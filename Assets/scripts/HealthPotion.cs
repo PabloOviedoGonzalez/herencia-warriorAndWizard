@@ -13,6 +13,12 @@ public class HealthPotion : InventoryObject
         
     }
 
+    public override void Use(Personaje pj)
+    {
+        pj.SetHealth(pj.GetHealth() + (int)valueToAdd);
+        Debug.Log(name + pj.GetHealth());
+    }
+
 
 
 

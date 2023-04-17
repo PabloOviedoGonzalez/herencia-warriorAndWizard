@@ -38,39 +38,40 @@ public class Demo : MonoBehaviour
         Warrior warr1 = new Warrior("Inyaky", 100, 100, 55);
         print(warr1.GetHealth());
         warr1.UseAllObjects();
-        
-
-        warr1.Attack();
-
-        Wizard wiz1 = new Wizard("cristiano", 300, 10, 10);
         print(warr1.GetHealth());
+        print(warr1.GetArmour());
 
-        List<Personaje> lista = new List<Personaje>();
-        lista.Add(warr1);
-        lista.Add(wiz1);
+        //warr1.Attack();
 
+        //Wizard wiz1 = new Wizard("cristiano", 300, 10, 10);
+        //print(warr1.GetHealth());
 
-        foreach(Personaje personaje in lista)
-        {
-            print(personaje.GetHealth());
-        }
-
-
-        HealthPotion poti = new HealthPotion();
-        poti.Use(wiz1);
-        poti.Use(warr1);
-        poti.Use(warr1);
+        //List<Personaje> lista = new List<Personaje>();
+        //lista.Add(warr1);
+        //lista.Add(wiz1);
 
 
-        
-
-        
-
-
-
+        //foreach(Personaje personaje in lista)
+        //{
+        //    print(personaje.GetHealth());
+        //}
 
 
-         
+        //HealthPotion poti = new HealthPotion();
+        //poti.Use(wiz1);
+        //poti.Use(warr1);
+        //poti.Use(warr1);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

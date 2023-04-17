@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryObject 
+public abstract class InventoryObject 
 {
 
     //profe, para q me deje acceder a "health" he puesto q el inventory herede de personaje para tener acceso 
@@ -24,11 +24,10 @@ public class InventoryObject
 
 
 
-    public void Use(Personaje pj)
-    {
-        pj.SetHealth(pj.GetHealth() + (int)valueToAdd);
-        Debug.Log(name + pj.GetHealth());
-    }
+    public abstract void Use(Personaje pj);
+    
+        
+    
 
 
     public float GetvalueToAdd()

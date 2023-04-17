@@ -9,10 +9,18 @@ public class ArmorPotion : InventoryObject
 
 
 
-    public ArmorPotion() :base("ArmorPotion", 5)
+    public ArmorPotion() :base("ArmorPotion", 100)
     {
         
     }
+
+    public override void Use(Personaje pj)
+    {
+        pj.SetArmour(pj.GetArmour() + (int)valueToAdd);
+        Debug.Log(name + pj.GetArmour());
+    }
+
+
 
 
 
